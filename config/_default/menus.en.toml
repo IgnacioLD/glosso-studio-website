@@ -1,0 +1,25 @@
+[[main]]
+  name = "Features"
+  url = "/features/"
+  weight = 10
+
+[[main]]
+  name = "Tech Stack"
+  url = "/tech-stack/"
+  weight = 20
+
+[[main]]
+  name = "Download"
+  url = "/download/"
+  weight = 30
+
+[[main]]
+  name = "Privacy Policy"
+  url = "/privacy-policy/"
+  weight = 40
+
+[[main]]
+  name = "GitLab"
+  url = "https://gitlab.com/shirobyte421/glosso-studio"
+  weight = 50
+  params = { icon = "gitlab", icon_pack = "fab" }

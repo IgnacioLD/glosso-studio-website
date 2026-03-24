@@ -1,0 +1,26 @@
+# Core settings
+autoSwitchAppearance = true
+defaultAppearance = "dark" # "light" or "dark"
+
+[header]
+  layout = "fixed" # "fixed", "sticky", or "basic"
+
+[footer]
+  showCopyright = false
+  showThemeAttribution = false
+  showRSS = true
+
+[homepage]
+  layout = "landing" # "page", "profile", or "landing"
+  showRecent = true
+  showRecentItems = 3
+  showRecentTitle = "Latest Project Updates"
+
+[article]
+  showDate = true
+  showReadingTime = true
+  showAuthor = false
+  showTaxonomies = true
+
+[appearance]
+  themeColor = "#6366F1"

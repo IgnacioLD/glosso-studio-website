@@ -1,0 +1,7 @@
+baseURL = 'https://glosso-studio.io/'
+languageCode = 'en-us'
+title = 'Glosso Studio'
+theme = 'blowfish'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
