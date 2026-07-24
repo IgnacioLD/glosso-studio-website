@@ -3,7 +3,7 @@ autoSwitchAppearance = true
 defaultAppearance = "dark"
 
 [header]
-  layout = "fixed"
+  layout = "basic"
 
 [footer]
   showCopyright = false
