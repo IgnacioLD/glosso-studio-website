@@ -8,17 +8,35 @@ Glosso Studio is committed to your privacy. Below you'll find the privacy polici
 
 ---
 
-### Glosso Studio (Pronunciation App)
+## Glosso Studio (Pronunciation App)
 
-**Data Collection.** We do **not** collect, store, or share any personal data from our users.
+### Data collection & sharing
 
-**Offline-First.** All your progress, recordings, and phonetic assessments are processed and stored locally on your device. No data is transmitted to external servers except for the initial download of curriculum databases.
+| Data type | Collected? | Shared? |
+|---|---|---|
+| Location (approximate) | No | No |
+| Location (precise) | No | No |
+| Personal info (name, email, user IDs, address, phone) | No | No |
+| Financial info | No | No |
+| Health & fitness | No | No |
+| Messages (email, SMS, in-app) | No | No |
+| Photos & videos | No | No |
+| Audio files | No | No |
+| Files & documents | No | No |
+| Calendar | No | No |
+| Contacts | No | No |
+| App activity | No | No |
+| Web browsing history | No | No |
+| App info & performance | No | No |
+| Device or other IDs | No | No |
 
-**Third-Party Services.** We do not use any third-party analytics or tracking services.
+**Offline-first.** All progress, audio recordings, and phonetic assessments are processed and stored **locally on your device**. No data is transmitted to external servers except for the initial download of curriculum databases.
+
+**Third-party services.** No analytics, no crash reporters, no advertising SDKs.
 
 ---
 
-### TransitOS (Metrovalencia Planner)
+## TransitOS (Metrovalencia Planner)
 
 See the full [TransitOS Privacy Policy](/transitos/privacy-policy/).
 
@@ -26,9 +44,9 @@ In short: TransitOS has no analytics, no telemetry, and no advertising SDKs. It 
 
 ---
 
-### Contact
+## Contact
 
-If you have any questions about these policies, feel free to open an issue on our repositories:
+If you have any questions about these policies, please open an issue on our repositories:
 
 - [GitHub](https://github.com/IgnacioLD)
 - [GitLab](https://gitlab.com/shirobyte421/glosso-studio)

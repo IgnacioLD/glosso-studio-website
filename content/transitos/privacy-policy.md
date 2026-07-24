@@ -6,27 +6,52 @@ draft: false
 
 **Last updated: July 24, 2026**
 
-TransitOS does **not** collect, store, or transmit any personal data.
+TransitOS is designed to respect your privacy. This policy explains what data the app handles and why.
 
 ---
 
-### What we collect
+## Data collection & sharing
 
-**Nothing.** TransitOS has no analytics, no telemetry, no advertising SDKs, and no tracking.
+| Data type | Collected? | Shared? |
+|---|---|---|
+| Location (approximate) | Yes, on-device only | No |
+| Location (precise) | Yes, on-device only | No |
+| Personal info (name, email, user IDs, address, phone) | No | No |
+| Financial info | No | No |
+| Health & fitness | No | No |
+| Messages (email, SMS, in-app) | No | No |
+| Photos & videos | No | No |
+| Audio files (voice, music) | No | No |
+| Files & documents | No | No |
+| Calendar | No | No |
+| Contacts | No | No |
+| App activity (interactions, search history) | No | No |
+| Web browsing history | No | No |
+| App info & performance (crash logs, diagnostics) | No | No |
+| Device or other IDs | No | No |
 
-### Data sources
+### Location
 
-TransitOS fetches real-time transit data (arrival times, service alerts) directly from public APIs operated by Ferrocarrils de la Generalitat Valenciana (FGV). These requests are made directly from your device to FGV's servers. No intermediate server is used.
+TransitOS accesses your device location **solely** to show your position on the map and find nearby stations. Location data is processed entirely on your device. It is **never stored, transmitted off-device, or shared with anyone** — including the developer.
 
-### Permissions
+### Network access
 
-| Permission | Why |
-|---|---|
-| Internet | To fetch transit data from FGV's public API |
-| Location | To show your position on the map and find nearby stations |
+TransitOS makes HTTPS requests directly to FGV's public API to fetch transit data (timetables, lines, stations). No intermediate server is used. No analytics, telemetry, or tracking code is included in the app.
 
-Location data is never stored, transmitted, or shared. It is used only to display the blue dot on the map while the app is open.
+---
 
-### Open Source
+## Data security
 
-TransitOS is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. Source code is available at [github.com/IgnacioLD/TransitOS](https://github.com/IgnacioLD/TransitOS).
+All network traffic is encrypted in transit (HTTPS/TLS). No personal data is stored or retained.
+
+---
+
+## Data deletion
+
+Since TransitOS does not collect or store any personal data, there is nothing to delete. You can uninstall the app at any time and no residual data will remain on any server.
+
+---
+
+## Open source
+
+TransitOS is licensed under the **GNU AGPL-3.0**. The full source code is available at [github.com/IgnacioLD/TransitOS](https://github.com/IgnacioLD/TransitOS). You can audit it yourself.
