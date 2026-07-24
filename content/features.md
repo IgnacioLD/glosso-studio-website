@@ -51,3 +51,18 @@ git clone git@gitlab.com:shirobyte421/glosso-studio.git
 cd glosso-studio
 git lfs install && git lfs pull
 ```
+
+---
+
+## Screenshots
+
+<div class="gallery">
+  <img src="/screenshots/1.png" alt="Pronunciation practice" />
+  <img src="/screenshots/2.png" alt="Phoneme feedback" />
+  <img src="/screenshots/3.png" alt="Progress tracking" />
+  <img src="/screenshots/4.png" alt="Curriculum view" />
+</div>
+
+---
+
+<a class="btn btn-ghost" href="/privacy-policy/">Privacy Policy</a>

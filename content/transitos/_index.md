@@ -54,11 +54,4 @@ Available now on Google Play.
 
 ---
 
-## Screenshots
-
-<div class="gallery">
-  <img src="/screenshots/1.png" alt="Planner" />
-  <img src="/screenshots/2.png" alt="Route Results" />
-  <img src="/screenshots/3.png" alt="Favorites" />
-  <img src="/screenshots/4.png" alt="Settings" />
-</div>
+<a class="btn btn-ghost" style="margin-top:1rem" href="/transitos/privacy-policy/">Privacy Policy</a>
