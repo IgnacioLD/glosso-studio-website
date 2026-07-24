@@ -6,7 +6,7 @@ draft: false
 
 Glosso Studio is an **offline-first** pronunciation training app that helps you master spoken English with phoneme-level feedback.
 
-<p class="lead">Powered by Allosaurus and ONNX Runtime — no internet connection required.</p>
+<p class="lead">Powered by Allosaurus and ONNX Runtime. No internet connection required.</p>
 
 ---
 

@@ -32,7 +32,7 @@ TransitOS is designed to respect your privacy. This policy explains what data th
 
 ### Location
 
-TransitOS accesses your device location **solely** to show your position on the map and find nearby stations. Location data is processed entirely on your device. It is **never stored, transmitted off-device, or shared with anyone** — including the developer.
+TransitOS accesses your device location **solely** to show your position on the map and find nearby stations. Location data is processed entirely on your device. It is **never stored, transmitted off-device, or shared with anyone**, and that includes the developer.
 
 ### Network access
 

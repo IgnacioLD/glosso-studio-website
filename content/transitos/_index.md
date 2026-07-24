@@ -6,9 +6,9 @@ draft: false
 
 <img src="/icon-transitos.svg" alt="TransitOS" style="width:96px;height:96px;border-radius:22px;border:none;display:block;margin:0 auto 1rem" />
 
-TransitOS is a real-time trip planner for **public transport** — starting with Metrovalencia (FGV) and designed to grow into a multi-operator platform.
+TransitOS is a real-time trip planner for **public transport**. It starts with Metrovalencia (FGV) and is designed to grow into a multi-operator platform.
 
-<p class="lead">Clean, fast, and privacy-first. Real line colors, configurable transfer buffer, offline maps — no tracking.</p>
+<p class="lead">Clean, fast, and privacy-first. Real line colors, configurable transfer buffer, offline maps, and no tracking.</p>
 
 ---
 
