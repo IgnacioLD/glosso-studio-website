@@ -1,19 +1,35 @@
 ---
 title: "Privacy Policy"
-date: 2026-03-24T00:00:00Z
+date: 2026-07-24T00:00:00Z
 draft: false
 layout: "simple"
 ---
 
-At **Glosso Studio**, we prioritize your privacy. 
+Glosso Studio is committed to your privacy. Below you'll find the privacy policies for each project.
 
-### Data Collection
-We do **not** collect, store, or share any personal data from our users.
+---
 
-### Offline-First
-Because Glosso Studio is an offline-first application, all your progress, recordings, and phonetic assessments are processed and stored locally on your device. No data is transmitted to external servers except for the initial download of curriculum databases.
+### Glosso Studio (Pronunciation App)
 
-### Third-Party Services
-We do not use any third-party analytics or tracking services.
+**Data Collection.** We do **not** collect, store, or share any personal data from our users.
 
-If you have any questions about our privacy policy, feel free to reach out via our GitLab repository.
+**Offline-First.** Because Glosso Studio is an offline-first application, all your progress, recordings, and phonetic assessments are processed and stored locally on your device. No data is transmitted to external servers except for the initial download of curriculum databases.
+
+**Third-Party Services.** We do not use any third-party analytics or tracking services.
+
+---
+
+### TransitOS (Metrovalencia Planner)
+
+See the full [TransitOS Privacy Policy](/transitos/privacy-policy/).
+
+In short: TransitOS has no analytics, no telemetry, and no advertising SDKs. It fetches real-time transit data directly from FGV's public API. Location data is used only for the map and never leaves your device.
+
+---
+
+### Contact
+
+If you have any questions about these policies, feel free to open an issue on our repositories:
+
+- [GitHub](https://github.com/IgnacioLD)
+- [GitLab](https://gitlab.com/shirobyte421/glosso-studio)

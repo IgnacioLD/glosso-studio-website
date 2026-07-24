@@ -1,34 +1,24 @@
-languageName = "English"
+label = "English"
 title = "Glosso Studio"
-description = "Offline-first pronunciation training application built with Kotlin Multiplatform."
+description = "Independent open-source projects by IgnacioLD."
 
 [params]
   displayName = "EN"
   isoCode = "en"
-  
+
   [params.author]
-    name = "ShiroByte42"
-    
+    name = "Glosso Studio"
+    headline = "Independent Open-Source Software"
+
+  [[params.author.links]]
+    github = "https://github.com/IgnacioLD"
+  [[params.author.links]]
+    gitlab = "https://gitlab.com/shirobyte421/glosso-studio"
+  [[params.author.links]]
+    website = "https://ignacio.tech"
+
   [params.homepage]
     showRecent = true
-
-  [params.homepage.hero]
-    showHero = true
-    heroLayout = "side" # "basic", "side", "background"
-    title = "Glosso Studio"
-    subtitle = "Professional Pronunciation Training, Offline."
-    content = "Advanced phonetic recognition powered by Allosaurus and ONNX Runtime, right on your Android device. Master spoken English with granular feedback and structured lessons, no internet required."
-    image = "logo.png"
-
-  [[params.homepage.hero.buttons]]
-    text = "Get Started"
-    link = "/download/"
-    primary = true
-
-  [[params.homepage.hero.buttons]]
-    text = "View on GitLab"
-    link = "https://gitlab.com/shirobyte421/glosso-studio"
-    primary = false
 
   [params.footer]
     showCopyright = false

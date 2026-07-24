@@ -1,9 +1,9 @@
 # Core settings
 autoSwitchAppearance = true
-defaultAppearance = "dark" # "light" or "dark"
+defaultAppearance = "dark"
 
 [header]
-  layout = "fixed" # "fixed", "sticky", or "basic"
+  layout = "fixed"
 
 [footer]
   showCopyright = false
@@ -11,8 +11,8 @@ defaultAppearance = "dark" # "light" or "dark"
   showRSS = true
 
 [homepage]
-  layout = "landing" # "page", "profile", or "landing"
-  showRecent = true
+  layout = "landing"
+  showRecent = false
   showRecentItems = 3
   showRecentTitle = "Latest Project Updates"
 
