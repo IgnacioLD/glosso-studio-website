@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Glosso Studio</title>
+  <meta name="description" content="Independent open-source projects by IgnacioLD. Privacy-first software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --c-bg: #09090b;
+      --c-bg2: #18181b;
+      --c-bg3: #27272a;
+      --c-border: #27272a;
+      --c-border-h: #3f3f46;
+      --c-fg: #fafafa;
+      --c-fg2: #a1a1aa;
+      --c-fg3: #71717a;
+      --c-pri: #6366f1;
+      --c-pri2: #4f46e5;
+      --c-sec: #06b6d4;
+      --c-em: #10b981;
+      --c-amb: #f59e0b;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --c-bg: #fafafa; --c-bg2: #fff; --c-bg3: #f4f4f5;
+        --c-border: #e4e4e7; --c-border-h: #d4d4d8;
+        --c-fg: #09090b; --c-fg2: #52525b; --c-fg3: #a1a1aa;
+      }
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      background:var(--c-bg);color:var(--c-fg);
+      line-height:1.7;-webkit-font-smoothing:antialiased;
+    }
+    ::selection{background:var(--c-pri);color:#fff}
+    a{color:inherit;text-decoration:none}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:.4}50%{opacity:.8}}
+    @keyframes grad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;
+    }
+    .nav-inner{
+      max-width:1200px;margin:0 auto;display:flex;align-items:center;
+      justify-content:space-between;height:56px;margin-top:.75rem;
+      padding:0 1.25rem;border-radius:1rem;
+      background:rgba(24,24,27,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      border:1px solid rgba(39,39,42,.5);
+    }
+    @media(prefers-color-scheme:light){.nav-inner{background:rgba(255,255,255,.75);border-color:rgba(228,228,231,.5)}}
+    .nav-logo{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.95rem}
+    .nav-logo-icon{width:30px;height:30px;border-radius:.5rem;background:linear-gradient(135deg,var(--c-pri),var(--c-sec));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:800}
+    .nav-links{display:flex;align-items:center;gap:.125rem}
+    .nav-links a{padding:.35rem .7rem;border-radius:.5rem;font-size:.8rem;font-weight:500;color:var(--c-fg2);transition:all .2s}
+    .nav-links a:hover{color:var(--c-fg);background:var(--c-bg3)}
+
+    .hero{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;
+      padding:5rem 1.5rem 3rem;position:relative;overflow:hidden;
+      text-align:center;
+    }
+    .hero::before{
+      content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;
+      border-radius:50%;background:var(--c-pri);filter:blur(140px);opacity:.1;animation:pulse 6s ease-in-out infinite;
+    }
+    .hero::after{
+      content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;
+      border-radius:50%;background:var(--c-sec);filter:blur(120px);opacity:.08;animation:pulse 6s ease-in-out infinite;animation-delay:3s;
+    }
+    .hero-content{position:relative;z-index:1;max-width:720px}
+    .hero-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .9rem;border-radius:99px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);color:var(--c-pri);margin-bottom:1.5rem}
+    .hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--c-em);animation:pulse 2s ease-in-out infinite}
+    .hero h1{font-size:clamp(3rem,7vw,5rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:1.25rem}
+    .hero h1 span{background:linear-gradient(135deg,var(--c-pri) 0%,var(--c-sec) 50%,var(--c-pri) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:grad 4s ease infinite}
+    .hero p{font-size:1.15rem;color:var(--c-fg2);max-width:500px;margin:0 auto 2rem;line-height:1.75}
+    .hero p b{color:var(--c-fg);font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;border-radius:.75rem;font-size:.85rem;font-weight:600;transition:all .25s}
+    .btn-pri{background:var(--c-pri);color:#fff;box-shadow:0 4px 14px rgba(99,102,241,.25),0 0 30px rgba(99,102,241,.15)}
+    .btn-pri:hover{background:var(--c-pri2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(99,102,241,.35),0 0 50px rgba(99,102,241,.2)}
+    .btn-ghost{background:transparent;color:var(--c-fg2)}
+    .btn-ghost:hover{color:var(--c-fg);background:var(--c-bg3)}
+    .hero-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.75rem}
+
+    .sec{padding:6rem 1.5rem}
+    .sec-inner{max-width:1200px;margin:0 auto}
+    .sec-head{margin-bottom:4rem}
+    .sec-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--c-pri);margin-bottom:.5rem}
+    .sec-title{font-size:clamp(2rem,4vw,2.75rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:.75rem}
+    .sec-title span{background:linear-gradient(135deg,var(--c-pri),var(--c-sec));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .sec-sub{font-size:1.05rem;color:var(--c-fg2);max-width:32rem;line-height:1.7}
+
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1.25rem}
+    .card{
+      background:var(--c-bg2);border:1px solid var(--c-border);
+      border-radius:1.25rem;padding:2.25rem;
+      transition:all .35s;display:flex;flex-direction:column;position:relative;overflow:hidden;
+    }
+    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c-pri),var(--c-sec));opacity:0;transition:opacity .35s}
+    .card:hover::before{opacity:1}
+    .card:hover{border-color:var(--c-border-h);transform:translateY(-3px);box-shadow:0 20px 50px -12px rgba(0,0,0,.4)}
+    .card-icon{width:52px;height:52px;border-radius:.75rem;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:1rem}
+    .card-icon-purple{background:linear-gradient(135deg,var(--c-pri),#8b5cf6);box-shadow:0 8px 20px -4px rgba(99,102,241,.4)}
+    .card-icon-amber{background:linear-gradient(135deg,var(--c-amb),#f43f5e);box-shadow:0 8px 20px -4px rgba(245,158,11,.3)}
+    .card h3{font-size:1.25rem;font-weight:700;margin-bottom:.125rem}
+    .card .st{font-size:.78rem;color:var(--c-fg3);font-weight:500;margin-bottom:.75rem}
+    .card p{font-size:.9rem;color:var(--c-fg2);line-height:1.7;flex:1;margin-bottom:1rem}
+    .card-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+    .card-tag{padding:.2rem .55rem;border-radius:99px;font-size:.68rem;font-weight:600;background:var(--c-bg3);color:var(--c-fg2);border:1px solid var(--c-border)}
+
+    .val-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .val-card{background:var(--c-bg2);border:1px solid var(--c-border);border-radius:1rem;padding:1.5rem;text-align:center;transition:all .3s}
+    .val-card:hover{border-color:var(--c-border-h);transform:translateY(-2px);box-shadow:0 10px 25px -5px rgba(0,0,0,.3)}
+    .val-icon{width:44px;height:44px;border-radius:.75rem;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;font-size:1.15rem}
+    .val-purple{background:rgba(99,102,241,.12);color:var(--c-pri)}
+    .val-emerald{background:rgba(16,185,129,.12);color:var(--c-em)}
+    .val-sky{background:rgba(6,182,212,.12);color:var(--c-sec)}
+    .val-amber{background:rgba(245,158,11,.12);color:var(--c-amb)}
+    .val-card h4{font-size:.9rem;font-weight:700;margin-bottom:.25rem}
+    .val-card p{font-size:.78rem;color:var(--c-fg2);line-height:1.6}
+
+    .about{
+      background:var(--c-bg2);border:1px solid var(--c-border);border-radius:1.25rem;
+      max-width:560px;margin:0 auto;text-align:center;padding:2.5rem 2rem;
+    }
+    .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--c-pri),var(--c-sec));display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;color:#fff;margin:0 auto 1rem}
+    .about h3{font-size:1.2rem;font-weight:700;margin-bottom:.125rem}
+    .about a{font-size:.85rem;color:var(--c-pri);font-weight:600}
+    .about p{font-size:.9rem;color:var(--c-fg2);line-height:1.8;max-width:420px;margin:1rem auto}
+    .about-links{display:flex;justify-content:center;gap:.5rem;margin-top:1rem}
+    .about-links a{width:38px;height:38px;border-radius:.75rem;display:flex;align-items:center;justify-content:center;background:var(--c-bg3);border:1px solid var(--c-border);color:var(--c-fg2);transition:all .2s}
+    .about-links a:hover{background:var(--c-border);color:var(--c-fg);transform:translateY(-1px)}
+    .about-links svg{width:17px;height:17px}
+
+    .foot{border-top:1px solid var(--c-border);padding:3rem 1.5rem 1.5rem}
+    .foot-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+    .foot-copy{font-size:.75rem;color:var(--c-fg3)}
+    .foot-social{display:flex;align-items:center;gap:.5rem}
+    .foot-social a{width:32px;height:32px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;color:var(--c-fg3);transition:all .2s}
+    .foot-social a:hover{color:var(--c-fg);background:var(--c-bg3)}
+    .foot-social svg{width:15px;height:15px}
+
+    @media(max-width:768px){
+      .card-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .sec{padding:4rem 1rem}
+      .hero{padding:5rem 1rem 2rem;min-height:auto}
+    }
+    @media(max-width:480px){
+      .val-grid{grid-template-columns:1fr}
+      .hero-actions{flex-direction:column;width:100%}
+      .hero-actions .btn{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">G</div>
+        Glosso Studio
+      </a>
+      <div class="nav-links">
+        <a href="/#projects">Projects</a>
+        <a href="/features/">Glosso</a>
+        <a href="/transitos/">TransitOS</a>
+        <a href="https://github.com/IgnacioLD" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        Open Source &middot; Non-profit
+      </div>
+      <h1>Glosso<br><span>Studio</span></h1>
+      <p>A one-person <b>non-profit</b> creating <b>free, privacy-first</b> software — no tracking, no ads, no corporate agenda.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-pri">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          Explore
+        </a>
+        <a href="https://github.com/IgnacioLD" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="sec">
+    <div class="sec-inner">
+      <div class="sec-head" style="text-align:center">
+        <div class="sec-label">What we build</div>
+        <h2 class="sec-title">Open source,<br><span>built with purpose</span></h2>
+        <p class="sec-sub" style="margin:0 auto">Free software crafted with obsessive attention to detail.</p>
+      </div>
+      <div class="card-grid">
+        <a href="/features/" class="card">
+          <div class="card-icon card-icon-purple">G</div>
+          <h3>Glosso Studio</h3>
+          <div class="st">Pronunciation Training</div>
+          <p>Offline-first pronunciation app powered by Allosaurus and ONNX Runtime. Phoneme-level feedback — no internet required.</p>
+          <div class="card-tags">
+            <span class="card-tag">Kotlin Multiplatform</span>
+            <span class="card-tag">ONNX Runtime</span>
+            <span class="card-tag">Offline-first</span>
+          </div>
+        </a>
+        <a href="/transitos/" class="card">
+          <div class="card-icon card-icon-amber">T</div>
+          <h3>TransitOS</h3>
+          <div class="st">Valencia Metro &amp; Train Planner</div>
+          <p>Real-time Metrovalencia trip planner with real line colors, transfer buffer, and zero tracking — clean, fast, private.</p>
+          <div class="card-tags">
+            <span class="card-tag">Kotlin</span>
+            <span class="card-tag">Jetpack Compose</span>
+            <span class="card-tag">Privacy-first</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="sec-inner">
+      <div class="sec-head" style="text-align:center">
+        <div class="sec-label">Our Values</div>
+        <h2 class="sec-title">Software that<br><span>respects you</span></h2>
+      </div>
+      <div class="val-grid">
+        <div class="val-card">
+          <div class="val-icon val-emerald"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+          <h4>Privacy by Design</h4>
+          <p>No analytics, no telemetry, no ads. We don't want your data.</p>
+        </div>
+        <div class="val-card">
+          <div class="val-icon val-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></div>
+          <h4>Open Source</h4>
+          <p>Every line is public. AGPL-3.0. Fork it, audit it, contribute.</p>
+        </div>
+        <div class="val-card">
+          <div class="val-icon val-sky"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <h4>Offline-first</h4>
+          <p>Your device does the heavy lifting. No cloud dependency.</p>
+        </div>
+        <div class="val-card">
+          <div class="val-icon val-amber"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+          <h4>Built with Love</h4>
+          <p>Solo-developed, hand-crafted to every pixel and interaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="sec-inner">
+      <div class="about">
+        <div class="avatar">I</div>
+        <h3>IgnacioLD</h3>
+        <a href="https://ignacio.tech" target="_blank" rel="noopener">ignacio.tech</a>
+        <p>Solo developer building open-source tools. No VC, no growth hacks — just carefully crafted software, built in the open.</p>
+        <div class="about-links">
+          <a href="https://github.com/IgnacioLD" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          </a>
+          <a href="https://gitlab.com/shirobyte421/glosso-studio" target="_blank" rel="noopener" title="GitLab">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 14.045l-6.27 4.326-2.395 7.382L12 24.463l-3.335 1.29-2.395-7.382L0 14.045l4.33-1.16L12 0l4.33 4.305 2.395 7.064z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="foot-copy">&copy; 2026 Glosso Studio. All projects licensed under AGPL-3.0.</span>
+      <div class="foot-social">
+        <a href="https://github.com/IgnacioLD" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        </a>
+        <a href="https://gitlab.com/shirobyte421/glosso-studio" target="_blank" rel="noopener" title="GitLab">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 14.045l-6.27 4.326-2.395 7.382L12 24.463l-3.335 1.29-2.395-7.382L0 14.045l4.33-1.16L12 0l4.33 4.305 2.395 7.064z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

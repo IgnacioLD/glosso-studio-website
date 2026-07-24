@@ -1,7 +1,18 @@
 baseURL = 'https://glossostudio.com/'
-locale = 'en-US'
+languageCode = 'en-us'
 title = 'Glosso Studio'
-theme = 'blowfish'
+theme = 'PaperMod'
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  env = "production"
+  description = "Independent open-source projects by IgnacioLD. Privacy-first software."
+  author = "IgnacioLD"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

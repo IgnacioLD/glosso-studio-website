@@ -2,7 +2,6 @@
 title: "Privacy Policy"
 date: 2026-07-24T00:00:00Z
 draft: false
-layout: "simple"
 ---
 
 Glosso Studio is committed to your privacy. Below you'll find the privacy policies for each project.
@@ -13,7 +12,7 @@ Glosso Studio is committed to your privacy. Below you'll find the privacy polici
 
 **Data Collection.** We do **not** collect, store, or share any personal data from our users.
 
-**Offline-First.** Because Glosso Studio is an offline-first application, all your progress, recordings, and phonetic assessments are processed and stored locally on your device. No data is transmitted to external servers except for the initial download of curriculum databases.
+**Offline-First.** All your progress, recordings, and phonetic assessments are processed and stored locally on your device. No data is transmitted to external servers except for the initial download of curriculum databases.
 
 **Third-Party Services.** We do not use any third-party analytics or tracking services.
 

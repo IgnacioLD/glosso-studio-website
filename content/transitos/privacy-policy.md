@@ -2,7 +2,6 @@
 title: "TransitOS Privacy Policy"
 date: 2026-07-24T00:00:00Z
 draft: false
-layout: "simple"
 ---
 
 **Last updated: July 24, 2026**
