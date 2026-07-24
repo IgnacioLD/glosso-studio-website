@@ -4,7 +4,7 @@ date: 2026-07-24T00:00:00Z
 draft: false
 ---
 
-<img src="/icon-transitos.svg" alt="TransitOS" style="width:96px;height:96px;border-radius:22px;border:none;margin-bottom:.5rem" />
+<img src="/icon-transitos.svg" alt="TransitOS" style="width:96px;height:96px;border-radius:22px;border:none;display:block;margin:0 auto 1rem" />
 
 TransitOS is a real-time trip planner for **Metrovalencia** (FGV) — Valencia's metro and train network.
 
