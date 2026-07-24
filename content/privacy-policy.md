@@ -36,7 +36,7 @@ Glosso Studio is committed to your privacy. Below you'll find the privacy polici
 
 ---
 
-## TransitOS (Metrovalencia Planner)
+## TransitOS (Public Transport Planner)
 
 See the full [TransitOS Privacy Policy](/transitos/privacy-policy/).
 
