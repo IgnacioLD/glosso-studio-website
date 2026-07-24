@@ -1,111 +1,106 @@
-{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
-{{ $authorLinks := .Site.Params.Author.links }}
-<article class="max-w-full prose dark:prose-invert">
-  <div class="relative">
-    <div class="mx-auto max-w-7xl p-0">
-      <div class="relative shadow-xl sm:overflow-hidden rounded-2xl">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 dark:from-primary-800 dark:via-primary-700 dark:to-secondary-800">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)]"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.2),transparent_50%)]"></div>
-        </div>
-        <div class="relative px-6 py-20 sm:px-10 sm:py-28 lg:py-36 lg:px-12 flex flex-col items-center justify-center text-center">
-          <div class="mb-6">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white backdrop-blur-sm">
-              Open Source &middot; Non-profit
-            </span>
-          </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-            Glosso Studio
-          </h1>
-          <p class="text-xl sm:text-2xl text-white/90 max-w-2xl mb-2 font-light">
-            Independent open-source projects built with passion.
-          </p>
-          <p class="text-base sm:text-lg text-white/70 max-w-xl mb-8">
-            A one-person non-profit organization creating useful,
-            privacy-first software for everyone.
-          </p>
-          <div class="flex flex-wrap gap-4 justify-center">
-            <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg"
-               href="https://github.com/IgnacioLD"
-               target="_blank"
-               aria-label="GitHub"
-               title="GitHub">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
-              GitHub
-            </a>
-            <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg"
-               href="https://gitlab.com/shirobyte421/glosso-studio"
-               target="_blank"
-               aria-label="GitLab"
-               title="GitLab">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 14.045l-6.27 4.326-2.395 7.382L12 24.463l-3.335 1.29-2.395-7.382L0 14.045l4.33-1.16L12 0l4.33 4.305 2.395 7.064z"/></svg>
-              GitLab
-            </a>
-            <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm"
-               href="https://ignacio.tech"
-               target="_blank"
-               aria-label="Website"
-               title="Website">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-              ignacio.tech
-            </a>
-          </div>
-        </div>
-      </div>
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-950 dark:to-neutral-900">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary-500/10 dark:bg-primary-500/5 blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-secondary-500/10 dark:bg-secondary-500/5 blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary-500/5 to-secondary-500/5 blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center">
+    <div class="mb-6 animate-fade-in">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-800">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse"></span>
+        Open Source &middot; Non-profit
+      </span>
+    </div>
+
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up">
+      Glosso Studio
+    </h1>
+
+    <p class="text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-4 animate-fade-in-up" style="animation-delay: 0.1s">
+      Independent open-source projects
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500 font-semibold">built with passion</span>.
+    </p>
+
+    <p class="text-base text-neutral-500 dark:text-neutral-500 max-w-lg mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.2s">
+      A one-person non-profit organization creating useful,
+      privacy-first software for everyone.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s">
+      <a href="#projects"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 shadow-lg shadow-primary-500/20 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 transition-all duration-200">
+        View Projects
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+      <a href="https://github.com/IgnacioLD" target="_blank"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:-translate-y-0.5 transition-all duration-200">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub
+      </a>
     </div>
   </div>
-</article>
+</section>
 
-<section class="max-w-6xl mx-auto px-4 sm:px-6 mt-16 mb-8">
-  <h2 class="text-center text-3xl font-bold mb-2">Our Projects</h2>
-  <p class="text-center text-neutral-500 dark:text-neutral-400 mb-10 max-w-lg mx-auto">
-    Free and open-source applications crafted with care.
-  </p>
+<section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-3">Our Projects</h2>
+    <p class="text-neutral-500 dark:text-neutral-400 max-w-md mx-auto">
+      Free and open-source applications crafted with care and attention to detail.
+    </p>
+  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
 
-    {{/* Glosso Studio Card */}}
-    <a href="/features/" class="group block bg-white dark:bg-neutral-800 rounded-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div class="h-2 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
-      <div class="p-8">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-xl font-bold shadow-md">G</div>
+    {{ $glosso := "Glosso Studio" }}
+    <a href="/features/"
+       class="group relative bg-white dark:bg-neutral-800/50 rounded-2xl border border-neutral-200 dark:border-neutral-700/50 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/5 hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700">
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary-400 via-primary-500 to-secondary-400"></div>
+      <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/5 to-secondary-500/5 rounded-bl-full"></div>
+      <div class="p-8 sm:p-10 relative">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-primary-500/20 group-hover:shadow-xl group-hover:shadow-primary-500/30 transition-shadow">
+            G
+          </div>
           <div>
             <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Glosso Studio</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400">Pronunciation Training</p>
+            <p class="text-sm text-neutral-500">Pronunciation Training</p>
           </div>
         </div>
-        <p class="text-neutral-600 dark:text-neutral-300 mb-5 leading-relaxed">
+        <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
           Offline-first pronunciation app powered by Allosaurus and ONNX Runtime.
           Master spoken English with phoneme-level feedback, no internet required.
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">Kotlin Multiplatform</span>
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-secondary-50 text-secondary-700 dark:bg-secondary-900/30 dark:text-secondary-300">ONNX Runtime</span>
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-[#F59E0B]/10 text-[#D97706] dark:bg-[#F59E0B]/20 dark:text-[#FBBF24]">Offline-first</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300 border border-primary-200 dark:border-primary-800">Kotlin Multiplatform</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">ONNX Runtime</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Offline-first</span>
         </div>
       </div>
     </a>
 
-    {{/* TransitOS Card */}}
-    <a href="/transitos/" class="group block bg-white dark:bg-neutral-800 rounded-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div class="h-2 bg-gradient-to-r from-amber-500 to-rose-500"></div>
-      <div class="p-8">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-rose-500 flex items-center justify-center text-white text-xl font-bold shadow-md">T</div>
+    <a href="/transitos/"
+       class="group relative bg-white dark:bg-neutral-800/50 rounded-2xl border border-neutral-200 dark:border-neutral-700/50 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/5 hover:-translate-y-1 hover:border-amber-300 dark:hover:border-amber-700">
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-amber-500 to-rose-400"></div>
+      <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/5 to-rose-500/5 rounded-bl-full"></div>
+      <div class="p-8 sm:p-10 relative">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-rose-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-amber-500/20 group-hover:shadow-xl group-hover:shadow-amber-500/30 transition-shadow">
+            T
+          </div>
           <div>
             <h3 class="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">TransitOS</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400">Valencia Metro &amp; Train Planner</p>
+            <p class="text-sm text-neutral-500">Valencia Metro &amp; Train Planner</p>
           </div>
         </div>
-        <p class="text-neutral-600 dark:text-neutral-300 mb-5 leading-relaxed">
+        <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
           Real-time trip planner for Metrovalencia (FGV). Clean, fast, and
-          privacy-first with real line colors, offline maps, and no tracking.
+          privacy-first with real line colors and no tracking.
         </p>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Kotlin Multiplatform</span>
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-rose-50 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300">Jetpack Compose</span>
-          <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">Privacy-first</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Kotlin</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300 border border-rose-200 dark:border-rose-800">Jetpack Compose</span>
+          <span class="px-3 py-1 rounded-lg text-xs font-medium bg-sky-50 text-sky-700 dark:bg-sky-900/20 dark:text-sky-300 border border-sky-200 dark:border-sky-800">Privacy-first</span>
         </div>
       </div>
     </a>
@@ -113,19 +108,44 @@
   </div>
 </section>
 
-<section class="max-w-3xl mx-auto px-4 sm:px-6 mt-16 mb-20">
-  <div class="bg-white dark:bg-neutral-800 rounded-2xl border border-neutral-200 dark:border-neutral-700 p-8 sm:p-10 text-center">
-    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
-      I
+<section class="bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-950 py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <div class="relative inline-flex mb-8">
+      <div class="w-24 h-24 rounded-full bg-gradient-to-br from-primary-400 to-secondary-500 flex items-center justify-center text-white text-4xl font-bold shadow-xl shadow-primary-500/20">
+        I
+      </div>
+      <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-emerald-400 rounded-full border-4 border-white dark:border-neutral-900 flex items-center justify-center">
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      </div>
     </div>
-    <h2 class="text-2xl font-bold mb-2">Built by IgnacioLD</h2>
-    <p class="text-neutral-500 dark:text-neutral-400 mb-4">
-      <a href="https://ignacio.tech" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">ignacio.tech</a>
+
+    <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-2">Built by IgnacioLD</h2>
+    <p class="text-primary-600 dark:text-primary-400 font-medium mb-6">
+      <a href="https://ignacio.tech" target="_blank" class="hover:underline">ignacio.tech</a>
     </p>
-    <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-lg mx-auto">
-      A solo developer passionate about building useful, open-source software.
-      All projects are developed in the open, with no tracking, no ads, and
-      no corporate agenda &mdash; just good tools that respect your privacy.
-    </p>
+
+    <div class="max-w-xl mx-auto space-y-4">
+      <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed text-lg">
+        A solo developer passionate about building useful, open-source software.
+        All projects are developed in the open, with no tracking, no ads, and
+        no corporate agenda &mdash; just good tools that respect your privacy.
+      </p>
+      <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+        Open source contributions and collaborations are always welcome.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+      <a href="https://github.com/IgnacioLD" target="_blank"
+         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-neutral-800 dark:bg-neutral-700 hover:bg-neutral-700 dark:hover:bg-neutral-600 transition-all duration-200">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+        GitHub Profile
+      </a>
+      <a href="https://gitlab.com/shirobyte421/glosso-studio" target="_blank"
+         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-200">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 14.045l-6.27 4.326-2.395 7.382L12 24.463l-3.335 1.29-2.395-7.382L0 14.045l4.33-1.16L12 0l4.33 4.305 2.395 7.064z"/></svg>
+        GitLab
+      </a>
+    </div>
   </div>
 </section>

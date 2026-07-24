@@ -1,0 +1,41 @@
+<footer class="border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 mt-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white text-sm font-bold">
+            G
+          </div>
+          <span class="font-semibold text-neutral-900 dark:text-white">Glosso Studio</span>
+        </div>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+          Independent open-source software by a solo developer.
+          No tracking, no ads, no corporate agenda.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold text-neutral-900 dark:text-white mb-3">Projects</h4>
+        <ul class="space-y-2">
+          <li><a href="/features/" class="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Glosso Studio</a></li>
+          <li><a href="/transitos/" class="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">TransitOS</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold text-neutral-900 dark:text-white mb-3">Links</h4>
+        <ul class="space-y-2">
+          <li><a href="/privacy-policy/" class="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Privacy</a></li>
+          <li><a href="https://github.com/IgnacioLD" target="_blank" class="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">GitHub</a></li>
+          <li><a href="https://ignacio.tech" target="_blank" class="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">ignacio.tech</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-neutral-200 dark:border-neutral-800 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-neutral-400 dark:text-neutral-500">
+        &copy; {{ now.Format "2006" }} Glosso Studio. Open source.
+      </p>
+    </div>
+  </div>
+</footer>

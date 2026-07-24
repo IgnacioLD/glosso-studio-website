@@ -1,0 +1,62 @@
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-neutral-900/70 border-b border-neutral-200/50 dark:border-neutral-800/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white text-sm font-bold shadow-sm group-hover:shadow-md transition-shadow">
+          G
+        </div>
+        <span class="font-semibold text-neutral-900 dark:text-white text-lg">Glosso Studio</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1">
+        {{ range .Site.Menus.main }}
+          {{ if or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+            <a href="{{ .URL }}" target="_blank"
+               class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200 flex items-center gap-1.5">
+              {{ if .Pre }}<span>{{ partial "icon.html" .Pre }}</span>{{ end }}
+              <span>{{ .Name }}</span>
+            </a>
+          {{ else }}
+            <a href="{{ .URL }}"
+               class="px-3 py-2 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200{{ if $.IsMenuCurrent "main" . }} text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20{{ end }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </nav>
+
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-btn" class="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" aria-label="Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+    <div class="px-4 py-3 space-y-1">
+      {{ range .Site.Menus.main }}
+        {{ if or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+          <a href="{{ .URL }}" target="_blank"
+             class="block px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all">
+            {{ .Name }}
+          </a>
+        {{ else }}
+          <a href="{{ .URL }}"
+             class="block px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all{{ if $.IsMenuCurrent "main" . }} text-primary-600 dark:text-primary-400{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</header>
+
+<script>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
