@@ -1,4 +1,4 @@
-baseURL = 'https://glosso-studio.io/'
+baseURL = 'https://glossostudio.com/'
 locale = 'en-US'
 title = 'Glosso Studio'
 theme = 'blowfish'
