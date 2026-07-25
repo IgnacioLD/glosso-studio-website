@@ -1,5 +1,5 @@
 baseURL = 'https://glossostudio.com/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Glosso Studio'
 theme = 'PaperMod'
 
